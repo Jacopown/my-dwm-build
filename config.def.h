@@ -67,9 +67,9 @@ static const Layout layouts[] = {
 #define MODKEY Mod4Mask
 #define TAGKEYS(KEY, TAG)                                          \
 	{MODKEY, KEY, view, {.ui = 1 << TAG}},                         \
-		{MODKEY | ControlMask, KEY, toggleview, {.ui = 1 << TAG}}, \
-		{MODKEY | ShiftMask, KEY, tag, {.ui = 1 << TAG}},          \
-		{MODKEY | ControlMask | ShiftMask, KEY, toggletag, {.ui = 1 << TAG}},
+	{MODKEY | ControlMask, KEY, toggleview, {.ui = 1 << TAG}}, \
+	{MODKEY | ShiftMask, KEY, tag, {.ui = 1 << TAG}},          \
+	{MODKEY | ControlMask | ShiftMask, KEY, toggletag, {.ui = 1 << TAG}},
 
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd)                                           \
@@ -94,22 +94,14 @@ static Key keys[] = {
 	{MODKEY, XK_h, setmfact, {.f = -0.05}},
 	{MODKEY, XK_l, setmfact, {.f = +0.05}},
 	{MODKEY | ShiftMask, XK_Return, zoom, {0}},
-	{MODKEY | Mod4Mask, XK_u, incrgaps, {.i = +1}},
-	{MODKEY | Mod4Mask | ShiftMask, XK_u, incrgaps, {.i = -1}},
-	{MODKEY | Mod4Mask, XK_i, incrigaps, {.i = +1}},
-	{MODKEY | Mod4Mask | ShiftMask, XK_i, incrigaps, {.i = -1}},
-	{MODKEY | Mod4Mask, XK_o, incrogaps, {.i = +1}},
-	{MODKEY | Mod4Mask | ShiftMask, XK_o, incrogaps, {.i = -1}},
-	{MODKEY | Mod4Mask, XK_6, incrihgaps, {.i = +1}},
-	{MODKEY | Mod4Mask | ShiftMask, XK_6, incrihgaps, {.i = -1}},
-	{MODKEY | Mod4Mask, XK_7, incrivgaps, {.i = +1}},
-	{MODKEY | Mod4Mask | ShiftMask, XK_7, incrivgaps, {.i = -1}},
-	{MODKEY | Mod4Mask, XK_8, incrohgaps, {.i = +1}},
-	{MODKEY | Mod4Mask | ShiftMask, XK_8, incrohgaps, {.i = -1}},
-	{MODKEY | Mod4Mask, XK_9, incrovgaps, {.i = +1}},
-	{MODKEY | Mod4Mask | ShiftMask, XK_9, incrovgaps, {.i = -1}},
-	{MODKEY | Mod4Mask, XK_0, togglegaps, {0}},
-	{MODKEY | Mod4Mask | ShiftMask, XK_0, defaultgaps, {0}},
+	{MODKEY | Mod1Mask, XK_u, incrgaps, {.i = +1}},
+	{MODKEY | Mod1Mask | ShiftMask, XK_u, incrgaps, {.i = -1}},
+	{MODKEY | Mod1Mask, XK_i, incrigaps, {.i = +1}},
+	{MODKEY | Mod1Mask | ShiftMask, XK_i, incrigaps, {.i = -1}},
+	{MODKEY | Mod1Mask, XK_o, incrogaps, {.i = +1}},
+	{MODKEY | Mod1Mask | ShiftMask, XK_o, incrogaps, {.i = -1}},
+	{MODKEY | Mod1Mask, XK_0, togglegaps, {0}},
+	{MODKEY | Mod1Mask | ShiftMask, XK_0, defaultgaps, {0}},
 	{MODKEY, XK_Tab, view, {0}},
 	{MODKEY | ShiftMask, XK_q, killclient, {0}},
 	{MODKEY, XK_t, setlayout, {.v = &layouts[0]}},
@@ -124,14 +116,15 @@ static Key keys[] = {
 	{MODKEY | ShiftMask, XK_comma, tagmon, {.i = -1}},
 	{MODKEY | ShiftMask, XK_period, tagmon, {.i = +1}},
 	TAGKEYS(XK_1, 0)
-		TAGKEYS(XK_2, 1)
-			TAGKEYS(XK_3, 2)
-				TAGKEYS(XK_4, 3)
-					TAGKEYS(XK_5, 4)
-						TAGKEYS(XK_6, 5)
-							TAGKEYS(XK_7, 6)
-								TAGKEYS(XK_8, 7)
-									TAGKEYS(XK_9, 8){MODKEY | ShiftMask, XK_e, quit, {0}},
+	TAGKEYS(XK_2, 1)
+	TAGKEYS(XK_3, 2)
+	TAGKEYS(XK_4, 3)
+	TAGKEYS(XK_5, 4)
+	TAGKEYS(XK_6, 5)
+	TAGKEYS(XK_7, 6)
+	TAGKEYS(XK_8, 7)
+	TAGKEYS(XK_9, 8)
+	{MODKEY | ShiftMask, XK_e, quit, {0}},
 };
 
 /* button definitions */
