@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx = 1; /* border pixel of windows */
+static const unsigned int borderpx = 3; /* border pixel of windows */
 static const unsigned int snap = 32;	/* snap pixel */
 static const unsigned int gappih = 20;	/* horiz inner gap between windows */
 static const unsigned int gappiv = 10;	/* vert inner gap between windows */
@@ -17,12 +17,21 @@ static const char col_gray2[] = "#444444";
 static const char col_gray3[] = "#bbbbbb";
 static const char col_gray4[] = "#eeeeee";
 static const char col_cyan[] = "#005577";
-static const char *colors[][3] = {
-	/*               fg		bg         	border   */
+/*My colors*/
+static const char col_dark_blue[] = "#070536";
+static const char col_red[] = "#820000";
+static const char col_light_blue[] = "#4c4d9d";
+static const char col_dark_purple[] = "#140024";
+static const char col_white[] = "#ffffff";
+/*static const char *colors[][3] = {
+	*               fg		bg         	border   
 	[SchemeNorm] = 	{col_gray3, 	col_gray1,	col_gray2},
 	[SchemeSel] = 	{col_gray4, 	col_cyan,	col_cyan},
+};*/
+static const char *colors[][3] = {
+        [SchemeNorm] =  {col_white,     col_dark_blue,      col_dark_purple},
+	[SchemeSel]  =  {col_white,     col_light_blue,       col_red},  
 };
-
 /* tagging */
 static const char *tags[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
 
