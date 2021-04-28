@@ -12,26 +12,22 @@ static const int showbar = 1;		/* 0 means no bar */
 static const int topbar = 1;		/* 0 means bottom bar */
 static const char *fonts[] = {"monospace:size=10"};
 static const char dmenufont[] = "monospace:size=10";
-static const char col_gray1[] = "#222222";
-static const char col_gray2[] = "#444444";
-static const char col_gray3[] = "#bbbbbb";
-static const char col_gray4[] = "#eeeeee";
-static const char col_cyan[] = "#005577";
+
 /*My colors*/
 static const char NormalBG[] = "#070536";
 static const char SelectedBorder[] = "#820000";
 static const char SelectedBG[] = "#4c4d9d";
 static const char NormalBorder[] = "#140024";
 static const char FontColor[] = "#ffffff";
-/*static const char *colors[][3] = {
-	*               fg		bg         	border   
-	[SchemeNorm] = 	{col_gray3, 	col_gray1,	col_gray2},
-	[SchemeSel] = 	{col_gray4, 	col_cyan,	col_cyan},
-};*/
+/*
 static const char *colors[][3] = {
         [SchemeNorm] =  {FontColor,     NormalBG,      NormalBorder},
 	[SchemeSel]  =  {FontColor,     SelectedBG,    SelectedBorder},  
-};
+};*/
+
+/*set colors with pywal*/
+#include "/home/racoon/.cache/wal/colors-wal-dwm.h"
+
 /* tagging */
 static const char *tags[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
 

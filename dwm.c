@@ -67,7 +67,8 @@ enum
 enum
 {
 	SchemeNorm,
-	SchemeSel
+	SchemeSel,
+	SchemeUrg
 }; /* color schemes */
 enum
 {
