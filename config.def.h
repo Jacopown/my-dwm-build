@@ -18,19 +18,19 @@ static const char col_gray3[] = "#bbbbbb";
 static const char col_gray4[] = "#eeeeee";
 static const char col_cyan[] = "#005577";
 /*My colors*/
-static const char col_dark_blue[] = "#070536";
-static const char col_red[] = "#820000";
-static const char col_light_blue[] = "#4c4d9d";
-static const char col_dark_purple[] = "#140024";
-static const char col_white[] = "#ffffff";
+static const char NormalBG[] = "#070536";
+static const char SelectedBorder[] = "#820000";
+static const char SelectedBG[] = "#4c4d9d";
+static const char NormalBorder[] = "#140024";
+static const char FontColor[] = "#ffffff";
 /*static const char *colors[][3] = {
 	*               fg		bg         	border   
 	[SchemeNorm] = 	{col_gray3, 	col_gray1,	col_gray2},
 	[SchemeSel] = 	{col_gray4, 	col_cyan,	col_cyan},
 };*/
 static const char *colors[][3] = {
-        [SchemeNorm] =  {col_white,     col_dark_blue,      col_dark_purple},
-	[SchemeSel]  =  {col_white,     col_light_blue,       col_red},  
+        [SchemeNorm] =  {FontColor,     NormalBG,      NormalBorder},
+	[SchemeSel]  =  {FontColor,     SelectedBG,    SelectedBorder},  
 };
 /* tagging */
 static const char *tags[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
@@ -88,7 +88,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = {"dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL};
+static const char *dmenucmd[] = {"dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", NormalBG, "-nf", FontColor, "-sb", SelectedBG, "-sf", FontColor, NULL};
 static const char *termcmd[] = {"st", NULL};
 static const char *browsercmd[] = {"firefox", NULL};
 
