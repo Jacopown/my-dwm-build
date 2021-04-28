@@ -86,7 +86,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = {"dmenu_run", "-m", dmenumon, "-fn", dmenufont, NULL};
 static const char *termcmd[] = {"st", NULL};
 static const char *browsercmd[] = {"firefox", NULL};
-static const char *spotifycmd[] = {"spotify, NULL"};
+static const char *spotifycmd[] = {"spotify", NULL};
 static const char *codecmd[] = {"code", NULL};
 static const char *xournalppcmd[] = {"xournalpp", NULL};
 
