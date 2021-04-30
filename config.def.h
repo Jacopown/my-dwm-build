@@ -89,15 +89,21 @@ static const char *browsercmd[] = {"firefox", NULL};
 static const char *spotifycmd[] = {"spotify", NULL};
 static const char *codecmd[] = {"code", NULL};
 static const char *xournalppcmd[] = {"xournalpp", NULL};
+static const char *flameshotcmd[] = {"flameshot gui", NULL}
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+	
+	/*Shortcuts*/
 	{MODKEY,                        XK_space,  spawn,          {.v = dmenucmd}},
 	{MODKEY,                        XK_Return, spawn,          {.v = termcmd}},
 	{MODKEY,                        XK_w,      spawn,          {.v = browsercmd}},
 	{MODKEY,                        XK_s,      spawn,          {.v = spotifycmd}},
 	{MODKEY,                        XK_c,      spawn,          {.v = codecmd}},
 	{MODKEY,                        XK_x,      spawn,          {.v = xournalppcmd}},
+        {MODKEY,                        XK_m,      spawn,          {.v = flameshotcmd}},
+        
+	/*Windows handling*/
 	{MODKEY,                        XK_b,      togglebar,      {0}},
 	{MODKEY,                        XK_l,      focusstack,     {.i = +1}},
 	{MODKEY | ShiftMask,            XK_l,      focusstack,     {.i = -1}},
@@ -106,6 +112,10 @@ static Key keys[] = {
 	{MODKEY,                        XK_j,      setmfact,       {.f = +0.05}},
 	{MODKEY | ShiftMask,            XK_j,      setmfact,       {.f = -0.05}},
 	{MODKEY | ShiftMask,            XK_Return, zoom,           {0}},
+        {MODKEY | ShiftMask,            XK_q,      killclient,     {0}},
+        {MODKEY,                        XK_Tab,    view,           {0}},
+	
+	/*Gaps*/
 	{MODKEY | Mod1Mask,             XK_u,      incrgaps,       {.i = +1}},
 	{MODKEY | Mod1Mask | ShiftMask, XK_u,      incrgaps,       {.i = -1}},
 	{MODKEY | Mod1Mask,             XK_i,      incrigaps,      {.i = +1}},
@@ -114,8 +124,8 @@ static Key keys[] = {
 	{MODKEY | Mod1Mask | ShiftMask, XK_o,      incrogaps,      {.i = -1}},
 	{MODKEY | Mod1Mask,             XK_0,      togglegaps,     {0}},
 	{MODKEY | Mod1Mask | ShiftMask, XK_0,      defaultgaps,    {0}},
-	{MODKEY,                        XK_Tab,    view,           {0}},
-	{MODKEY | ShiftMask,            XK_q,      killclient,     {0}},
+
+	/*Layouts*/
 	{MODKEY,                        XK_t,      setlayout,      {.v = &layouts[0]}},
 	{MODKEY | ShiftMask,            XK_t,      setlayout,      {.v = &layouts[2]}},
 	{MODKEY,                        XK_y,      setlayout,      {.v = &layouts[1]}},
@@ -125,12 +135,8 @@ static Key keys[] = {
 	{MODKEY,                        XK_i,      setlayout,      {.v = &layouts[11]}},
 	{MODKEY | ShiftMask,            XK_i,      setlayout,      {.v = &layouts[5]}},
 	{MODKEY,                        XK_f,      setlayout,      {.v = &layouts[13]}},
-	{MODKEY,                        XK_0,      view,           {.ui = ~0}},
-	{MODKEY | ShiftMask,            XK_0,      tag,            {.ui = ~0}},
-	{MODKEY,                        XK_comma,  focusmon,       {.i = -1}},
-	{MODKEY,                        XK_period, focusmon,       {.i = +1}},
-	{MODKEY | ShiftMask,            XK_comma,  tagmon,         {.i = -1}},
-	{MODKEY | ShiftMask,            XK_period, tagmon,         {.i = +1}},
+
+	/*Tag keys*/
 	TAGKEYS(XK_1, 0)
 	TAGKEYS(XK_2, 1)
 	TAGKEYS(XK_3, 2)
@@ -140,6 +146,9 @@ static Key keys[] = {
 	TAGKEYS(XK_7, 6)
 	TAGKEYS(XK_8, 7)
 	TAGKEYS(XK_9, 8)
+        {MODKEY,                        XK_0,      view,           {.ui = ~0}},
+        {MODKEY | ShiftMask,            XK_0,      tag,            {.ui = ~0}},
+
 	{MODKEY | ShiftMask,            XK_e,      quit,           {0}},
 };
 
