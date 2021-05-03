@@ -89,7 +89,6 @@ static const char *browsercmd[] = {"firefox", NULL};
 static const char *spotifycmd[] = {"spotify", NULL};
 static const char *codecmd[] = {"code", NULL};
 static const char *xournalppcmd[] = {"xournalpp", NULL};
-static const char *flameshotcmd[] = {"flameshot gui", NULL}
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -101,7 +100,6 @@ static Key keys[] = {
 	{MODKEY,                        XK_s,      spawn,          {.v = spotifycmd}},
 	{MODKEY,                        XK_c,      spawn,          {.v = codecmd}},
 	{MODKEY,                        XK_x,      spawn,          {.v = xournalppcmd}},
-        {MODKEY,                        XK_m,      spawn,          {.v = flameshotcmd}},
         
 	/*Windows handling*/
 	{MODKEY,                        XK_b,      togglebar,      {0}},
