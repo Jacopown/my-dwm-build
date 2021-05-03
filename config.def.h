@@ -147,6 +147,7 @@ static Key keys[] = {
         {MODKEY,                        XK_0,      view,           {.ui = ~0}},
         {MODKEY | ShiftMask,            XK_0,      tag,            {.ui = ~0}},
 
+	{MODKEY,                        XK_e,      quit,           {1}},
 	{MODKEY | ShiftMask,            XK_e,      quit,           {0}},
 };
 
